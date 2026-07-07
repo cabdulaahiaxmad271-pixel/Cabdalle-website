@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ogow Nooca Qofka Aad Tahay</title>
+<style>
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:40px;
+}
+input{
+padding:12px;
+width:250px;
+font-size:18px;
+border-radius:10px;
+border:none;
+}
+button{
+padding:12px 20px;
+margin-top:15px;
+font-size:18px;
+background:#00c853;
+color:white;
+border:none;
+border-radius:10px;
+}
+#result{
+margin-top:25px;
+font-size:22px;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<h2>Gali Magacaaga</h2>
+
+<input type="text" id="name" placeholder="Magacaaga">
+
+<br>
+
+<button onclick="showResult()">Ogow</button>
+
+<div id="result"></div>
+
+<script>
+function showResult(){
+
+let n=document.getElementById("name").value;
+
+if(n==""){
+alert("Fadlan magacaaga geli");
+return;
+}
+
+let results=[
+"Waxaad tahay Qof Caqli badan 🧠",
+"Waxaad tahay Hoggaamiye 👑",
+"Waxaad tahay Qof Daacad ah ❤️",
+"Waxaad tahay Qof Kaftan badan 😂",
+"Waxaad tahay Qof Naxariis badan 🤝"
+];
+
+let r=results[Math.floor(Math.random()*results.length)];
+
+document.getElementById("result").innerHTML=n+"<br><br>"+r;
+
+}
+</script>
+
+</body>
+</html>
